@@ -1,1 +1,26 @@
 {% extends 'base.html' %}
+
+
+{% block content %}
+
+  <!--Main layout-->
+  <main>
+    <div class="container">
+
+      {% include 'items_nav.html' %}
+      
+      <section class="text-center mb-4">
+        <!--Grid row-->
+        <div class="row wow fadeIn">        
+          {% include 'item_card.html' with list=items %}                    
+        </div>
+      </section>      
+
+      {% include 'pagination.html' %}
+
+    </div>
+  </main>
+  <!--Main layout-->
+
+
+{% endblock content %}
